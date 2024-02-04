@@ -16,12 +16,12 @@ function App() {
     <Navbar/>
     <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route path="/about" component={AboutUsPage} />
+        <Route exact path="/about" component={AboutUsPage} />
         <Route exact path="/blog" component={BlogPage} />
         <Route exact path="/blog/:id" component={BlogPostPage} />
         <Route exact path="/services" component={ServicesPage} />
         <Route exact path="/services/:id" component={ServiceDetailPage} />
-        <Route path="/contact" component={ContactUsPage} />
+        <Route exact path="/contact" component={ContactUsPage} />
       </Switch>
     </>
     
