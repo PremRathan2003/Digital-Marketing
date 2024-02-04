@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Digital-Marketing/static/css/main.733fe9af.css",
-    "main.js": "/Digital-Marketing/static/js/main.7b27c56b.js",
+    "main.js": "/Digital-Marketing/static/js/main.031910f8.js",
     "static/js/592.c3694925.chunk.js": "/Digital-Marketing/static/js/592.c3694925.chunk.js",
     "index.html": "/Digital-Marketing/index.html",
     "main.733fe9af.css.map": "/Digital-Marketing/static/css/main.733fe9af.css.map",
-    "main.7b27c56b.js.map": "/Digital-Marketing/static/js/main.7b27c56b.js.map",
+    "main.031910f8.js.map": "/Digital-Marketing/static/js/main.031910f8.js.map",
     "592.c3694925.chunk.js.map": "/Digital-Marketing/static/js/592.c3694925.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.733fe9af.css",
-    "static/js/main.7b27c56b.js"
+    "static/js/main.031910f8.js"
   ]
 }
