@@ -1,0 +1,119 @@
+/* src/styles/LandingPage.css */
+.landing-page {
+  text-align: center;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+  animation: slideInLeft 1s ease;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+  font-weight: 350;
+  animation: slideInRight 1s ease;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.values {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.services{
+    padding-left: 25px;
+}
+
+.value {
+  flex: 1;
+  margin: 0 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: left;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-5px);
+}
+.our-heading{
+    font-weight: 500;
+}
+
+.value h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  }
+
+.value p {
+  font-size: 1.2rem;
+  font-weight: 350;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

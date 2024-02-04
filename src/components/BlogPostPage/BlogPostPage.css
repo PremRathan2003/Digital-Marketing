@@ -1,0 +1,44 @@
+/* BlogPostPage.css */
+.blog-post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-post-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post-description {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .back-to-blog-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
