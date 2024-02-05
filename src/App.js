@@ -15,9 +15,9 @@ function App() {
     <Navbar/>
     <Switch>
         <Redirect exact from="/Digital-Marketing" to="/" />
-        <Route exact path="/Digital-Marketing" component={LandingPage} />
-        <Route exact path="/Digital-Marketing/about" component={AboutUsPage} />
-        <Route exact path="/Digital-Marketing/blog" component={BlogPage} />
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/about" component={AboutUsPage} />
+        <Route exact path="/blog" component={BlogPage} />
         <Route exact path="/blog/:id" component={BlogPostPage} />
         <Route exact path="/services" component={ServicesPage} />
         <Route exact path="/services/:id" component={ServiceDetailPage} />
