@@ -22,7 +22,7 @@ const BlogPage = () => {
 
   return (
     <div className="blog-container">
-      <h1>Blog Posts</h1>
+      <h1 className='heading'>Blog Posts</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (

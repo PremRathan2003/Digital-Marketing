@@ -1,16 +1,16 @@
 
 .blog-container {
-  margin: 0 auto;
   width: 90vw;
-  padding: 20px;
 }
-
+.heading{
+  margin-left: 12px;
+}
 .blog-list {
   display: flex;
     flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 10px;
 }
 
 .blog-item {
