@@ -73,4 +73,11 @@ text-align: center;  }
     margin-bottom: 20px;
     text-align: center;
   }
-  
+  @media screen and (max-width: 576px) {
+    h2{
+      font-size: 28px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }

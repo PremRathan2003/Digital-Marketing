@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IoMenuSharp } from "react-icons/io5";
 import './Navbar.css';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
+      <div className='row'>
       <div className="logo">
-        <Link to="/">Digital Marketing</Link>
+        <Link to="/" className="logo-link">Digital Marketing</Link>
       </div>
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/blog">Blogs</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+      <div className="menu-icon" onClick={handleMenuClick}>
+        <IoMenuSharp />
+      </div>
+      </div>
+      <ul className={isOpen ? "nav-links open" : "nav-links"}>
+        <li><Link to="/" className="nav-link">Home</Link></li>
+        <li><Link to="/about" className="nav-link">About</Link></li>
+        <li><Link to="/blog" className="nav-link">Blogs</Link></li>
+        <li><Link to="/services" className="nav-link">Services</Link></li>
+        <li><Link to="/contact" className="nav-link">Contact</Link></li>
       </ul>
     </nav>
   );

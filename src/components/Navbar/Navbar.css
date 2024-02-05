@@ -5,7 +5,7 @@
     background-color: #333;
     color: #fff;
     padding: 7px;
-    
+    width: auto;
   }
   
   .logo a {
@@ -32,4 +32,49 @@
   .nav-links li a:hover {
     color: #ffd700;
   }
+  .menu-icon{
+    display: none;
+  }
   
+  @media screen and (max-width: 576px) {
+    .navbar {
+      flex-direction: column;
+      padding: 20px 10px;
+      width: 100vw;
+    }
+  
+    .logo {
+      margin-bottom: 20px;
+    }
+    .nav-row{
+      display: flex;
+
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.8rem;
+      margin-left: 15px;
+
+
+    }
+  
+    .menu-icon:hover {
+      opacity: 0.7;
+    }
+  }

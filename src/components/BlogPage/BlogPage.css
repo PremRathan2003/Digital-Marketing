@@ -27,6 +27,7 @@
   height: auto;
   border-bottom: 1px solid #ddd;
   height: 250px;
+  border-radius: 12px;
 }
 
 .blog-item-content {
@@ -55,4 +56,15 @@ align-self: center;}
 
 .blog-item a:hover {
   background-color: #0056b3;
+}
+
+@media screen and (max-width: 576px) {
+  .heading{
+    font-size: 28px;
+  }
+  .blog-container{
+    width: 90vw;
+  }
+  .blog-item{
+  }
 }
