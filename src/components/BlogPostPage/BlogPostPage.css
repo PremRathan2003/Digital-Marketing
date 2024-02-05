@@ -1,8 +1,9 @@
-/* BlogPostPage.css */
 .blog-post-container {
-    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .blog-post-title {
@@ -12,10 +13,11 @@
   }
   
   .blog-post-image {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     margin-bottom: 20px;
     height: 60vh;
+    align-self: center;
   }
   
   .blog-post-content {
