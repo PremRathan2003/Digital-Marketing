@@ -9,23 +9,44 @@ const ContactUsPage = () => {
   });
 
   const [submitStatus, setSubmitStatus] = useState('');
+  const [formErrors, setFormErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Clear error message when user starts typing in a field
+    setFormErrors({ ...formErrors, [e.target.name]: '' });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    // Client-side form validation
+    const errors = {};
+    if (!formData.name.trim()) {
+      errors.name = 'Name is required';
+    }
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      errors.email = 'Invalid email format';
+    }
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required';
+    }
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+
     try {
-      const response = await fetch('/api/submit', {
+      const response = await fetch('/form_submissions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
-      
+
       if (response.ok) {
         setSubmitStatus('success');
       } else {
@@ -58,6 +79,7 @@ const ContactUsPage = () => {
             onChange={handleChange}
             required
           />
+          {formErrors.name && <span className="error-msg">{formErrors.name}</span>}
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
@@ -69,6 +91,7 @@ const ContactUsPage = () => {
             onChange={handleChange}
             required
           />
+          {formErrors.email && <span className="error-msg">{formErrors.email}</span>}
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label>
@@ -79,6 +102,7 @@ const ContactUsPage = () => {
             onChange={handleChange}
             required
           ></textarea>
+          {formErrors.message && <span className="error-msg">{formErrors.message}</span>}
         </div>
         <button type="submit" className="submit-btn">Submit</button>
       </form>

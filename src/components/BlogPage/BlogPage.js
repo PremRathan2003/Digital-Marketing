@@ -29,7 +29,7 @@ const BlogPage = () => {
           {blogPosts.length > 0 ? (
             blogPosts.map(post => (
               <li className="blog-item" key={post.id}>
-                <img src={post.featured_image} alt={post.title} />
+                <img src={post.featured_image} alt={post.title} loading="lazy" />
                 <h2>{post.title}</h2>
                 <p>{post.content}</p>
                 <p>{post.description}</p>
