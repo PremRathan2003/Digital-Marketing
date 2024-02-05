@@ -1,6 +1,5 @@
-// src/App.js
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import LandingPage from './components/LandingPage/LandingPage';
 import AboutUsPage from './components/AboutUsPage/AboutUsPage';
 import BlogPage from './components/BlogPage/BlogPage';
@@ -15,6 +14,7 @@ function App() {
     <>
     <Navbar/>
     <Switch>
+        <Redirect exact from="/Digital-Marketing" to="/" />
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/about" component={AboutUsPage} />
         <Route exact path="/blog" component={BlogPage} />

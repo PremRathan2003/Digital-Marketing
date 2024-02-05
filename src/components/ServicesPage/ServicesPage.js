@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './ServicesPage.css'
+import './ServicesPage.css';
 
 const ServicesPage = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    // Fetch services from backend
+    // Fetch services from the backend
     axios.get('http://localhost:8001/services')
       .then(response => {
         setServices(response.data);
@@ -20,7 +20,7 @@ const ServicesPage = () => {
     <div>
       <h1 className='services-heading'>Our Services</h1>
       <div className="services-container">
-        {services.map(service => (
+        {Array.isArray(services) && services.map(service => (
           <div key={service.id} className="service-card">
             <img src={service.featured_image} alt={service.title} />
             <h2>{service.title}</h2>
