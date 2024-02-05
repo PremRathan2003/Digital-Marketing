@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ServicesPage.css';
+import { Link } from 'react-router-dom';
 
 const ServicesPage = () => {
   const [services, setServices] = useState([]);
@@ -24,7 +25,7 @@ const ServicesPage = () => {
           <div key={service.id} className="service-card">
             <img src={service.featured_image} alt={service.title} />
             <h2>{service.title}</h2>
-            <a href={`/services/${service.id}`}>Learn More</a>
+            <Link to={`/services/${service.id}`}>Learn More</Link>
           </div>
         ))}
       </div>

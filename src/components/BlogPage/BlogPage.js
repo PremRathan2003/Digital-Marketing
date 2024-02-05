@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './BlogPage.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -33,7 +34,7 @@ const BlogPage = () => {
                 <h2>{post.title}</h2>
                 <p>{post.content}</p>
                 <p>{post.description}</p>
-                <a href={`/blog/${post.id}`}>Read More</a>
+                <Link to={`/blog/${post.id}`}>Read More</Link>
               </li>
             ))
           ) : (
